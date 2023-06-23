@@ -1,0 +1,112 @@
+:root {
+  --primaryColor: #7a63f1;
+  --secondaryColor: #ebe8fc;
+  --textColor: #a3a3a3;
+  --greyColor: #f4f4f4;
+  --whiteColor: #f5f4fa;
+  --blackColor: #434344;
+}
+
+.home {
+  padding-top: 8rem;
+}
+
+.setContainer {
+  padding: 0 1.5rem;
+  text-align: center;
+  display: grid;
+  gap: 2rem;
+}
+.setContainer .homeText .homespan {
+  color: var(--textColor);
+  font-weight: 400;
+  font-size: 15px;
+}
+.setContainer .homeText .homeTitle {
+  color: var(--blackColor);
+  font-weight: 700;
+  font-size: 30px;
+}
+.setContainer .homeText .btns {
+  gap: 1.5rem;
+  justify-content: center;
+}
+.setContainer .homeText .btns .btn {
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-weight: 600;
+  margin-top: 5rem;
+  font-size: 12px;
+}
+.setContainer .homeText .btns .btn:hover {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+}
+.setContainer .homeText .btns .btn:nth-child(1) {
+  background: var(--whiteColor);
+  color: var(--textColor);
+}
+.setContainer .homeText .btns .btn:nth-child(1):hover {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+}
+.setContainer .homeText .btns .btn:nth-child(2):hover {
+  background: var(--whiteColor);
+  color: var(--textColor);
+}
+.setContainer .homeImage {
+  margin: auto;
+}
+
+@media screen and (min-width: 520px) {
+  .home .setContainer .homeText .homespan {
+    font-size: 18px;
+  }
+  .home .setContainer .homeText .homeTitle {
+    font-size: 35px;
+  }
+  .home .setContainer .homeText .btns .btn {
+    font-size: 14px;
+  }
+  .home .setContainer .homeImage {
+    max-width: 85%;
+  }
+}
+@media screen and (min-width: 770px) {
+  .home {
+    padding-top: 10rem;
+  }
+  .home .setContainer {
+    gap: 2.5rem;
+  }
+  .home .setContainer .homeText .homespan {
+    font-size: 21px;
+  }
+  .home .setContainer .homeText .homeTitle {
+    font-size: 45px;
+  }
+  .home .setContainer .homeText .btns {
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 996px) {
+  .home {
+    padding-top: 12rem;
+  }
+  .home .setContainer {
+    gap: 3rem;
+  }
+  .home .setContainer .homeText .homespan {
+    font-size: 25px;
+  }
+  .home .setContainer .homeText .homeTitle {
+    font-size: 55px;
+  }
+  .home .setContainer .homeText .btns .btn {
+    font-size: 14px;
+    padding: 1rem 2rem;
+  }
+  .home .setContainer .homeImage {
+    width: 60%;
+  }
+}/*# sourceMappingURL=Home.css.map */

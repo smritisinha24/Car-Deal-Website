@@ -1,0 +1,186 @@
+:root{
+    --primaryColor: #56A7DC;
+    --secondaryColor: #ebe8fc;
+    --textColor: #a3a3a3;
+    --greyColor: #f4f4f4;
+    --whiteColor: #f5f4fa;
+    --blackColor: #434344;
+}
+
+.auction{
+    .setContainer{
+        .setHeading{
+            justify-content: space-between;
+            padding: 1rem 0;
+
+            .navbtns{
+                gap: .5rem;
+
+                .icon{
+                    padding: 3px 5px;
+                    background: var(--secondaryColor);
+                    border-radius: 3px;
+                    font-size: 30px;
+                    cursor: pointer;
+
+                    &:hover{
+                        background: var(--primaryColor);
+                        color: var(--whiteColor);
+                    }
+                }
+            }
+        }
+
+        .carContainer{
+            gap: 2rem;
+            
+            .singleCar{
+                text-align: left;
+                transition: .3s ease-in-out;
+                padding: 1rem;
+                border-radius: 10px;
+
+                .imgDiv{
+                    height: 200px;
+                    width: 100%;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    border: 5px solid transparent;
+
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+                
+                .carTitle{
+                    color: var(--blackColor);
+                    font-size: 15px;
+                    padding-top: 10px;
+                }
+
+                .miles{
+                    color: var(--blackColor);
+                    opacity:0.7; 
+                    font-size: 14px;
+                }
+
+                .AWD{
+                    padding: 1rem 0;
+                    color: var(--blackColor);
+                    font-weight: 600;
+                    font-size: 15px;
+                }
+
+                .price_buyBtn{
+                    gap: 1rem;
+
+                    span{
+                        padding: .5rem 1rem;
+                        border-radius: 3px;
+                        font-weight: 600;
+                    }
+
+                    .price{
+                        background: var(--secondaryColor);
+                        color:var(--primaryColor);
+                    }
+
+                    .buy_Btn{
+                        background: var(--primaryColor);
+                        color:var(--whiteColor);
+                        cursor: pointer;
+
+                        &:hover{
+                            background: var(--secondaryColor);
+                            color: var(--textColor);
+                        }
+                    }
+                }
+
+                &:hover{
+                    transform: translateY(-7px);
+                    padding: 1rem;
+                    background: var(--secondaryColor);
+
+                    .price_buyBtn{
+                        span{
+                           border: 1px solid var(--primaryColor); 
+                        }
+                    }
+                }
+            }
+
+            .singleCarActive{
+                padding: 1rem;
+                background: var(--secondaryColor);
+
+                .price_buyBtn{
+                    span{
+                        border: 1px solid var(--primaryColor);
+                    }
+                }
+            }
+        }
+    }
+}
+
+//media queries to make app div responsive
+@media screen and (min-width: 520px){    
+    .auction{
+        .setContainer{
+            .setHeading{
+                margin-top: 1rem;
+                .setTitle{
+                    font-size: 23px;
+                }
+
+                .navbtns{
+                    gap: .5rem;
+                    
+                    .icon{
+                        font-size: 40px;
+                    }
+                }
+            }
+            .carContainer{
+                grid-template-columns: repeat(2,1fr);
+
+                .singleCar{
+                    .carTitle{
+                        font-size: 18px;
+                    }
+
+                    .miler, .AWD{
+                        font-size: 16px;
+                    }
+
+                    .price_buyBtn{
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 940px){    
+    .auction{
+        .setContainer{
+            .setHeading{
+                .setTitle{
+                    font-size: 28px;
+                }
+
+                .navbtns{
+                    gap: .5rem;
+                }
+            }
+
+            .carContainer{
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+    }
+}

@@ -1,0 +1,122 @@
+:root {
+  --primaryColor: #7a63f1;
+  --secondaryColor: #ebe8fc;
+  --textColor: #a3a3a3;
+  --greyColor: #f4f4f4;
+  --whiteColor: #f5f4fa;
+  --blackColor: #434344;
+}
+
+.trending .setContainer .setHeading {
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.trending .setContainer .setHeading .navbtns {
+  gap: 0.5rem;
+}
+.trending .setContainer .setHeading .navbtns .icon {
+  padding: 3px 5px;
+  background: var(--secondaryColor);
+  border-radius: 3px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.trending .setContainer .setHeading .navbtns .icon:hover {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+}
+.trending .setContainer .carContainer {
+  gap: 2rem;
+}
+.trending .setContainer .carContainer .singleCar {
+  text-align: left;
+  transition: 0.3s ease-in-out;
+}
+.trending .setContainer .carContainer .singleCar .imgDiv {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 5px solid transparent;
+}
+.trending .setContainer .carContainer .singleCar .imgDiv img {
+  height: 100%;
+  width: 100%;
+}
+.trending .setContainer .carContainer .singleCar .carTitle {
+  color: var(--blackColor);
+  font-size: 15px;
+  padding-top: 10px;
+}
+.trending .setContainer .carContainer .singleCar .miles {
+  color: var(--blackColor);
+  opacity: 0.7;
+  font-size: 14px;
+}
+.trending .setContainer .carContainer .singleCar .AWD {
+  padding: 1rem 0;
+  color: var(--blackColor);
+  font-weight: 600;
+  font-size: 15px;
+}
+.trending .setContainer .carContainer .singleCar .price_seller {
+  gap: 1rem;
+}
+.trending .setContainer .carContainer .singleCar .price_seller span {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+.trending .setContainer .carContainer .singleCar .price_seller .price {
+  background: var(--secondaryColor);
+  color: var(--primaryColor);
+}
+.trending .setContainer .carContainer .singleCar .price_seller .seller {
+  background: var(--greyColor);
+  color: var(--textColor);
+}
+.trending .setContainer .carContainer .singleCar:hover {
+  transform: translateY(-7px);
+}
+.trending .setContainer .carContainer .singleCar:hover .imgDiv {
+  border: 5px solid var(--primaryColor);
+}
+
+@media screen and (min-width: 520px) {
+  .trending .setContainer .setHeading {
+    margin-bottom: 1rem;
+  }
+  .trending .setContainer .setHeading .setTitle {
+    font-size: 23px;
+  }
+  .trending .setContainer .setHeading .navBtns {
+    gap: 0.5rem;
+  }
+  .trending .setContainer .setHeading .navBtns .icon {
+    font-size: 40px;
+  }
+  .trending .setContainer .carContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trending .setContainer .carContainer .singleCar .carTitle {
+    font-size: 18px;
+  }
+  .trending .setContainer .carContainer .singleCar .miles, .trending .setContainer .carContainer .singleCar .AWD {
+    font-size: 16px;
+  }
+  .trending .setContainer .carContainer .singleCar .price_seller span {
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 940px) {
+  .trending .setContainer .setHeading .setTitle {
+    font-size: 28px;
+  }
+  .trending .setContainer .setHeading .navBtns {
+    gap: 1rem;
+  }
+  .trending .setContainer .carContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}/*# sourceMappingURL=Trending.css.map */
